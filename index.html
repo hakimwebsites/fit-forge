@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    >
 
     <meta
         name="description"
         content="FitForge — a modern personal training website concept created as a portfolio project."
     >
+
+    <meta name="theme-color" content="#0b0b0b">
 
     <title>FitForge | Fitness Website Concept</title>
 
@@ -22,11 +29,12 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
+
 <body>
 
-    <!-- =========================
+    <!-- =====================================================
          PORTFOLIO PROJECT BAR
-    ========================== -->
+    ====================================================== -->
 
     <div class="project-bar">
         <p>
@@ -36,32 +44,22 @@
     </div>
 
 
-    <!-- =========================
-         NAVIGATION
-    ========================== -->
+    <!-- =====================================================
+         HEADER / NAVIGATION
+    ====================================================== -->
 
     <header class="header">
 
-        <nav class="navbar">
+        <nav class="navbar" aria-label="Main navigation">
 
             <a href="#home" class="logo" aria-label="FitForge home">
                 FIT<span>FORGE</span>
             </a>
 
-            <button
-                class="menu-toggle"
-                aria-label="Open navigation menu"
-                aria-expanded="false"
-            >
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-
             <ul class="nav-links">
 
                 <li>
-                    <a href="#home">Home</a>
+                    <a href="#home" class="active">Home</a>
                 </li>
 
                 <li>
@@ -80,50 +78,66 @@
                     <a href="#programs">Programs</a>
                 </li>
 
+                <li class="mobile-nav-cta">
+                    <a href="#contact">Start a Project</a>
+                </li>
+
             </ul>
 
             <a href="#contact" class="nav-button">
                 Start a Project
             </a>
 
+            <button
+                class="menu-toggle"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="main-navigation"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
         </nav>
 
     </header>
 
 
-    <main>
+    <main id="main-content">
 
-        <!-- =========================
+
+        <!-- =================================================
              HERO
-        ========================== -->
+        ================================================== -->
 
         <section class="hero" id="home">
 
             <div class="hero-content reveal">
 
-                <div class="eyebrow">
+                <p class="eyebrow">
                     FITNESS WEBSITE CONCEPT
-                </div>
+                </p>
 
                 <h1>
                     BUILD YOUR
-                    <span>STRONGER</span>
-                    SELF.
+                    <span>STRONGER SELF.</span>
                 </h1>
 
                 <p class="hero-text">
-                    A bold digital experience created for a modern personal
-                    training brand — focused on clarity, conversion and
-                    powerful visual storytelling.
+                    A bold digital experience created for a modern
+                    personal training brand — focused on clarity,
+                    conversion and powerful visual storytelling.
                 </p>
 
                 <div class="hero-buttons">
 
-                    <a href="#services" class="primary-button">
+                    <a href="#about" class="primary-button">
                         Explore The Concept
                     </a>
 
-                    <a href="#about" class="secondary-button">
+                    <a href="#showcase" class="secondary-button">
                         View Project
                     </a>
 
@@ -153,11 +167,9 @@
 
             <div class="hero-visual reveal">
 
-                <!-- Replace this image with your own fitness image -->
                 <img
                     src="images/hero.jpg"
-                    alt="Athlete during a strength training session"
-                    onerror="this.style.display='none'; this.parentElement.classList.add('image-missing')"
+                    alt="Athlete performing strength training"
                 >
 
                 <div class="image-label">
@@ -165,9 +177,9 @@
                     <strong>YOUR HERO IMAGE</strong>
                 </div>
 
-                <div class="hero-badge">
-                    <span>FIT</span>
-                    FORGE
+                <div class="hero-badge" aria-hidden="true">
+                    FIT
+                    <span>FORGE</span>
                 </div>
 
             </div>
@@ -175,24 +187,22 @@
         </section>
 
 
-        <!-- =========================
-             ABOUT / PROJECT
-        ========================== -->
+        <!-- =================================================
+             ABOUT
+        ================================================== -->
 
         <section class="about" id="about">
 
             <div class="about-image reveal">
 
-                <!-- Replace this with your own image -->
                 <img
                     src="images/trainer.jpg"
                     alt="Personal trainer helping an athlete"
-                    onerror="this.style.display='none'; this.parentElement.classList.add('image-missing')"
                 >
 
                 <div class="image-label">
                     <span>IMAGE AREA</span>
-                    <strong>TRAINING IMAGE</strong>
+                    <strong>TRAINER IMAGE</strong>
                 </div>
 
             </div>
@@ -210,17 +220,23 @@
                 </h2>
 
                 <p>
-                    FitForge is a fictional personal training brand created
-                    to demonstrate how a premium fitness business could
-                    present its services online.
+                    FitForge is a fictional personal training brand
+                    created as a professional website concept.
                 </p>
 
                 <p>
-                    The concept combines strong typography, a high-contrast
-                    visual identity and conversion-focused layouts to create
-                    a website that feels energetic without becoming visually
-                    overwhelming.
+                    The project explores how a modern fitness brand
+                    can combine strong visual identity, clear
+                    information architecture and conversion-focused
+                    user experience.
                 </p>
+
+                <p>
+                    Every section was designed with responsive
+                    layouts and real-world business presentation
+                    in mind.
+                </p>
+
 
                 <div class="project-details">
 
@@ -246,9 +262,9 @@
         </section>
 
 
-        <!-- =========================
+        <!-- =================================================
              SERVICES
-        ========================== -->
+        ================================================== -->
 
         <section class="services" id="services">
 
@@ -264,8 +280,8 @@
                 </h2>
 
                 <p>
-                    Example services used to demonstrate how a fitness
-                    business could structure its offerings online.
+                    Sample service content showing how a fitness
+                    business could present its core offerings online.
                 </p>
 
             </div>
@@ -273,11 +289,12 @@
 
             <div class="service-grid">
 
+
                 <article class="service-card reveal">
 
                     <div class="service-top">
-                        <span>01</span>
-                        <span>01 — 01</span>
+                        <span>01 / SERVICE</span>
+                        <span>FIT</span>
                     </div>
 
                     <h3>
@@ -286,11 +303,11 @@
 
                     <p>
                         One-on-one coaching designed around individual
-                        fitness goals, experience and lifestyle.
+                        goals, movement quality and consistent progress.
                     </p>
 
                     <a href="#programs">
-                        Explore Service →
+                        Explore Program →
                     </a>
 
                 </article>
@@ -299,8 +316,8 @@
                 <article class="service-card reveal">
 
                     <div class="service-top">
-                        <span>02</span>
-                        <span>01 — 02</span>
+                        <span>02 / SERVICE</span>
+                        <span>FORGE</span>
                     </div>
 
                     <h3>
@@ -308,12 +325,12 @@
                     </h3>
 
                     <p>
-                        Structured strength programs focused on movement,
-                        technique, progressive overload and consistency.
+                        Structured strength sessions focused on building
+                        power, confidence and sustainable performance.
                     </p>
 
                     <a href="#programs">
-                        Explore Service →
+                        Explore Program →
                     </a>
 
                 </article>
@@ -322,8 +339,8 @@
                 <article class="service-card reveal">
 
                     <div class="service-top">
-                        <span>03</span>
-                        <span>01 — 03</span>
+                        <span>03 / SERVICE</span>
+                        <span>ONLINE</span>
                     </div>
 
                     <h3>
@@ -331,12 +348,12 @@
                     </h3>
 
                     <p>
-                        Flexible digital coaching designed for people who
-                        want structured training wherever they are.
+                        Flexible digital coaching with training guidance
+                        that can fit around a busy lifestyle.
                     </p>
 
                     <a href="#programs">
-                        Explore Service →
+                        Explore Program →
                     </a>
 
                 </article>
@@ -346,9 +363,9 @@
         </section>
 
 
-        <!-- =========================
-             PROJECT HIGHLIGHTS
-        ========================== -->
+        <!-- =================================================
+             HIGHLIGHTS
+        ================================================== -->
 
         <section class="highlights">
 
@@ -356,13 +373,11 @@
 
                 <strong>01</strong>
 
-                <h3>
-                    Responsive
-                </h3>
+                <h3>Responsive</h3>
 
                 <p>
-                    Designed to adapt smoothly across desktop, tablet and
-                    mobile screens.
+                    Designed to adapt smoothly across desktop,
+                    tablet and mobile screens.
                 </p>
 
             </div>
@@ -372,13 +387,11 @@
 
                 <strong>02</strong>
 
-                <h3>
-                    Conversion Focused
-                </h3>
+                <h3>Conversion Focused</h3>
 
                 <p>
-                    Clear calls-to-action guide visitors toward programs
-                    and contact points.
+                    Clear calls-to-action help guide visitors
+                    toward taking the next step.
                 </p>
 
             </div>
@@ -388,13 +401,11 @@
 
                 <strong>03</strong>
 
-                <h3>
-                    Modern UI
-                </h3>
+                <h3>Modern UI</h3>
 
                 <p>
-                    Strong typography, spacing and contrast create a
-                    premium fitness aesthetic.
+                    Strong typography, spacing and contrast create
+                    a premium visual experience.
                 </p>
 
             </div>
@@ -404,13 +415,11 @@
 
                 <strong>04</strong>
 
-                <h3>
-                    Interactive
-                </h3>
+                <h3>Interactive</h3>
 
                 <p>
-                    JavaScript adds mobile navigation, animations and
-                    simple user interactions.
+                    Smooth navigation, animations and interactions
+                    make the experience feel dynamic.
                 </p>
 
             </div>
@@ -418,32 +427,33 @@
         </section>
 
 
-        <!-- =========================
-             DESIGN APPROACH
-        ========================== -->
+        <!-- =================================================
+             APPROACH
+        ================================================== -->
 
         <section class="approach" id="approach">
 
             <div class="section-heading reveal">
 
                 <p class="section-label">
-                    DESIGN APPROACH
+                    THE APPROACH
                 </p>
 
                 <h2>
-                    MORE THAN
-                    <span>A WORKOUT.</span>
+                    BUILT FOR
+                    <span>PEOPLE.</span>
                 </h2>
 
                 <p>
-                    The concept was designed around four principles that
-                    help a service-based website feel professional.
+                    A simple design philosophy focused on making
+                    the website easy to understand and easy to use.
                 </p>
 
             </div>
 
 
             <div class="approach-grid">
+
 
                 <article class="approach-card reveal">
 
@@ -454,8 +464,8 @@
                     </h3>
 
                     <p>
-                        A bold black-and-lime palette creates a recognizable
-                        visual direction suitable for a modern fitness brand.
+                        A distinctive visual system gives the brand
+                        a confident and recognizable digital presence.
                     </p>
 
                 </article>
@@ -470,8 +480,8 @@
                     </h3>
 
                     <p>
-                        Content is broken into focused sections so visitors
-                        can quickly understand the service and value.
+                        Important services, benefits and actions
+                        are presented without unnecessary complexity.
                     </p>
 
                 </article>
@@ -486,8 +496,8 @@
                     </h3>
 
                     <p>
-                        Simple interactions, natural spacing and realistic
-                        content keep the interface from feeling over-designed.
+                        The interface is designed around how real
+                        visitors browse, understand and make decisions.
                     </p>
 
                 </article>
@@ -502,8 +512,8 @@
                     </h3>
 
                     <p>
-                        WhatsApp and email contact points make it easy for
-                        visitors to take the next step.
+                        Clear contact options make it simple for
+                        potential customers to start a conversation.
                     </p>
 
                 </article>
@@ -513,11 +523,11 @@
         </section>
 
 
-        <!-- =========================
-             VISUAL SHOWCASE
-        ========================== -->
+        <!-- =================================================
+             SHOWCASE
+        ================================================== -->
 
-        <section class="showcase">
+        <section class="showcase" id="showcase">
 
             <div class="showcase-header reveal">
 
@@ -528,15 +538,16 @@
                     </p>
 
                     <h2>
-                        DESIGNED TO
-                        <span>STAND OUT.</span>
+                        BUILT TO
+                        <span>MOVE.</span>
                     </h2>
 
                 </div>
 
                 <p>
-                    Replace these placeholders with your own photography
-                    to turn the concept into a complete visual experience.
+                    A visual showcase demonstrating how fitness
+                    photography and bold typography can work
+                    together to create a strong brand experience.
                 </p>
 
             </div>
@@ -544,17 +555,17 @@
 
             <div class="showcase-grid">
 
+
                 <div class="showcase-image large reveal">
 
                     <img
                         src="images/workout.jpg"
-                        alt="Athlete performing a workout"
-                        onerror="this.style.display='none'; this.parentElement.classList.add('image-missing')"
+                        alt="Athlete during a workout"
                     >
 
                     <div class="image-label">
-                        <span>IMAGE AREA</span>
-                        <strong>WORKOUT PHOTO</strong>
+                        <span>VISUAL 01</span>
+                        <strong>WORKOUT</strong>
                     </div>
 
                 </div>
@@ -565,12 +576,11 @@
                     <img
                         src="images/fitness-detail.jpg"
                         alt="Fitness training detail"
-                        onerror="this.style.display='none'; this.parentElement.classList.add('image-missing')"
                     >
 
                     <div class="image-label">
-                        <span>IMAGE AREA</span>
-                        <strong>DETAIL SHOT</strong>
+                        <span>VISUAL 02</span>
+                        <strong>DETAIL</strong>
                     </div>
 
                 </div>
@@ -580,13 +590,12 @@
 
                     <img
                         src="images/gym.jpg"
-                        alt="Modern gym environment"
-                        onerror="this.style.display='none'; this.parentElement.classList.add('image-missing')"
+                        alt="Modern gym interior"
                     >
 
                     <div class="image-label">
-                        <span>IMAGE AREA</span>
-                        <strong>GYM IMAGE</strong>
+                        <span>VISUAL 03</span>
+                        <strong>ENVIRONMENT</strong>
                     </div>
 
                 </div>
@@ -596,9 +605,9 @@
         </section>
 
 
-        <!-- =========================
-             DEMO PROGRAMS
-        ========================== -->
+        <!-- =================================================
+             PROGRAMS
+        ================================================== -->
 
         <section class="programs" id="programs">
 
@@ -614,14 +623,15 @@
                 </h2>
 
                 <p>
-                    Sample pricing and packages created specifically for
-                    this portfolio concept.
+                    Demonstration pricing cards showing how a
+                    fitness business could structure its plans.
                 </p>
 
             </div>
 
 
             <div class="pricing-grid">
+
 
                 <article class="price-card reveal">
 
@@ -633,23 +643,20 @@
                         Starter
                     </h3>
 
-                    <p class="price">
+                    <div class="price">
                         $49
                         <span>/ month</span>
-                    </p>
+                    </div>
 
                     <ul>
-                        <li>✓ 2 training sessions / week</li>
-                        <li>✓ Basic workout plan</li>
-                        <li>✓ Progress tracking</li>
-                        <li>✓ Email support</li>
+                        <li>3 training sessions</li>
+                        <li>Basic workout plan</li>
+                        <li>Progress tracking</li>
+                        <li>Email support</li>
                     </ul>
 
-                    <a
-                        href="#contact"
-                        class="secondary-button"
-                    >
-                        Select Program
+                    <a href="#contact" class="secondary-button">
+                        Get Started
                     </a>
 
                 </article>
@@ -665,23 +672,20 @@
                         Pro
                     </h3>
 
-                    <p class="price">
+                    <div class="price">
                         $89
                         <span>/ month</span>
-                    </p>
+                    </div>
 
                     <ul>
-                        <li>✓ 4 training sessions / week</li>
-                        <li>✓ Personalized program</li>
-                        <li>✓ Nutrition guidance</li>
-                        <li>✓ Weekly progress reviews</li>
+                        <li>Unlimited training guidance</li>
+                        <li>Personalized workout plan</li>
+                        <li>Progress tracking</li>
+                        <li>Priority support</li>
                     </ul>
 
-                    <a
-                        href="#contact"
-                        class="primary-button"
-                    >
-                        Select Program
+                    <a href="#contact" class="primary-button">
+                        Get Started
                     </a>
 
                 </article>
@@ -697,23 +701,20 @@
                         Elite
                     </h3>
 
-                    <p class="price">
+                    <div class="price">
                         $149
                         <span>/ month</span>
-                    </p>
+                    </div>
 
                     <ul>
-                        <li>✓ Unlimited sessions</li>
-                        <li>✓ Fully personalized plan</li>
-                        <li>✓ Nutrition coaching</li>
-                        <li>✓ Priority support</li>
+                        <li>1-on-1 coaching</li>
+                        <li>Fully personalized plan</li>
+                        <li>Nutrition guidance</li>
+                        <li>Premium support</li>
                     </ul>
 
-                    <a
-                        href="#contact"
-                        class="secondary-button"
-                    >
-                        Select Program
+                    <a href="#contact" class="secondary-button">
+                        Get Started
                     </a>
 
                 </article>
@@ -723,17 +724,18 @@
         </section>
 
 
-        <!-- =========================
+        <!-- =================================================
              PORTFOLIO NOTE
-        ========================== -->
+        ================================================== -->
 
         <section class="portfolio-note">
 
-            <div class="portfolio-note-inner reveal">
+            <div class="portfolio-note-inner">
 
                 <div class="note-number">
                     2026
                 </div>
+
 
                 <div>
 
@@ -747,10 +749,11 @@
                     </h2>
 
                     <p>
-                        FitForge is not presented as an existing fitness
-                        business. It is a fictional brand created to
-                        demonstrate front-end design, responsive layouts,
-                        user experience and interactive web development.
+                        FitForge is a fictional fitness brand created
+                        for portfolio demonstration purposes. This
+                        project showcases front-end design, responsive
+                        layouts, user experience and interactive web
+                        development.
                     </p>
 
                 </div>
@@ -760,16 +763,16 @@
         </section>
 
 
-        <!-- =========================
+        <!-- =================================================
              CONTACT
-        ========================== -->
+        ================================================== -->
 
         <section class="contact" id="contact">
 
             <div class="contact-content reveal">
 
                 <p class="section-label">
-                    LET'S CONNECT
+                    START A CONVERSATION
                 </p>
 
                 <h2>
@@ -778,35 +781,35 @@
                 </h2>
 
                 <p>
-                    If you're looking for a modern website for your own
-                    business or personal brand, let's talk about your idea.
+                    This is a concept project, but I build real
+                    websites for businesses, brands and entrepreneurs.
+                    Let's discuss your next website.
                 </p>
+
 
                 <div class="contact-buttons">
 
-                    <!-- Replace YOUR_WHATSAPP_NUMBER in script.js -->
                     <a
                         href="#"
-                        class="primary-button whatsapp-button"
+                        class="primary-button"
                         data-contact="whatsapp"
                     >
-                        Message on WhatsApp
+                        Chat on WhatsApp
                     </a>
 
-                    <!-- Replace your email in script.js -->
                     <a
                         href="mailto:hakimwebsites.ug@gmail.com"
-                        class="secondary-button email-button"
-                        
+                        class="secondary-button"
                     >
                         Send an Email
                     </a>
 
                 </div>
 
+
                 <p class="contact-note">
-                    Replace the contact details in <strong>script.js</strong>
-                    before publishing.
+                    <strong>Hakim Web Studio</strong>
+                    · Web Design & Development
                 </p>
 
             </div>
@@ -816,17 +819,17 @@
     </main>
 
 
-    <!-- =========================
+    <!-- =====================================================
          FOOTER
-    ========================== -->
+    ====================================================== -->
 
     <footer>
 
         <div class="footer-left">
 
-            <a href="#home" class="footer-logo">
+            <div class="footer-logo">
                 FIT<span>FORGE</span>
-            </a>
+            </div>
 
             <p>
                 Fitness brand website concept.
@@ -853,4 +856,5 @@
     <script src="script.js"></script>
 
 </body>
+
 </html>
