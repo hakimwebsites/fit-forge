@@ -43,16 +43,60 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
+}
+
+/* =========================================================
+   HORIZONTAL OVERFLOW PROTECTION
+========================================================= */
+
+main,
+header,
+footer,
+section,
+.hero,
+.about,
+.services,
+.approach,
+.showcase,
+.programs,
+.contact {
+    max-width: 100%;
+    min-width: 0;
+}
+
+.hero-content,
+.hero-visual,
+.about-content,
+.about-image,
+.service-card,
+.approach-card,
+.showcase-header,
+.showcase-grid,
+.showcase-image,
+.price-card,
+.portfolio-note-inner,
+.contact-content {
+    min-width: 0;
+}
+
+img {
+    max-width: 100%;
 }
 
 
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 90px;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 
 body {
+    width: 100%;
+    max-width: 100%;
     min-height: 100vh;
 
     font-family: "Inter", Arial, sans-serif;
@@ -1626,40 +1670,41 @@ footer {
 
 
     .nav-links {
-        position: fixed;
+    position: fixed;
 
-        top: 70px;
-        left: 0;
+    top: 70px;
+    left: 0;
+    right: 0;
 
-        width: 100%;
+    width: 100%;
+    max-width: 100%;
 
-        height: calc(100dvh - 70px);
+    height: calc(100dvh - 70px);
 
-        min-height: 400px;
+    min-height: 300px;
+    text-align: center;
 
-        padding:
-            45px
-            max(8%, env(safe-area-inset-right))
-            calc(45px + env(safe-area-inset-bottom))
-            max(8%, env(safe-area-inset-left));
+    padding:
+        45px
+        8%
+        calc(45px + env(safe-area-inset-bottom))
+        8%;
 
-        background: rgba(11, 11, 11, 0.98);
+    background: rgba(11, 11, 11, 0.98);
 
-        display: flex;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 
-        flex-direction: column;
+    gap: 24px;
 
-        align-items: flex-start;
+    overflow-y: auto;
+    overflow-x: hidden;
 
-        gap: 24px;
+    transform: translateX(100%);
 
-        overflow-y: auto;
-
-        transform: translateX(100%);
-
-        transition: transform 0.35s ease;
-    }
-
+    transition: transform 0.35s ease;
+}
 
     .nav-links.open {
         transform: translateX(0);
@@ -1740,6 +1785,36 @@ footer {
         margin-bottom: 28px;
     }
 
+    .hero,
+    .about,
+    .showcase-grid,
+    .pricing-grid,
+    .service-grid,
+    .approach-grid,
+    .portfolio-note-inner {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero h1,
+    .about-content h2,
+    .section-heading h2,
+    .contact h2,
+    .portfolio-note h2,
+    .showcase h2 {
+        max-width: 100%;
+        overflow-wrap: anywhere;
+        word-break: normal;
+    }
+
+     .hero-text,
+    .about-content p,
+    .showcase-header p,
+    .portfolio-note p {
+        max-width: 100%;
+        overflow-wrap: break-word;
+    }
+
 
     .hero-buttons {
         display: grid;
@@ -1756,6 +1831,8 @@ footer {
 
 
     .hero-meta {
+        width: 100%;
+        max-width: 100%;
         gap: 18px;
 
         justify-content: space-between;
@@ -1763,6 +1840,10 @@ footer {
         margin-top: 40px;
 
         padding-top: 22px;
+    }
+
+    .hero-meta div {
+        min-width: 0;
     }
 
 
